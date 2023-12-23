@@ -1,21 +1,68 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXTreeTableView;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.layout.BorderPane;
 
 public class ItemFormController {
-    public JFXButton btnBack;
-    public AnchorPane ItemFormPane;
 
-    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage)ItemFormPane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashboardForm.fxml"))));
-        stage.show();
+    @FXML
+    private BorderPane pane;
+
+    @FXML
+    private JFXTextField txtCode;
+
+    @FXML
+    private JFXTextField txtDesc;
+
+    @FXML
+    private JFXTextField txtUnitPrice;
+
+    @FXML
+    private JFXTextField txtQty;
+
+    @FXML
+    private JFXTextField txtSearch;
+
+    @FXML
+    private JFXTreeTableView<?> tblItem;
+
+    @FXML
+    private TreeTableColumn<?, ?> colCode;
+
+    @FXML
+    private TreeTableColumn<?, ?> colDesc;
+
+    @FXML
+    private TreeTableColumn<?, ?> colUnitPrice;
+
+    @FXML
+    private TreeTableColumn<?, ?> colQty;
+
+    @FXML
+    private TreeTableColumn<?, ?> colOption;
+
+    @FXML
+    private JFXButton btnSave;
+
+    @FXML
+    void btnBackOnAction(ActionEvent event) {
+
     }
+
+    @FXML
+    void btnSaveOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnUpdateOnAction(ActionEvent event) {
+
+    }
+
 }
+
