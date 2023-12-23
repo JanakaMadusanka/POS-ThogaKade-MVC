@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="CustomerFormPane" prefHeight="654.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <JFXButton fx:id="btnBack" layoutX="21.0" layoutY="15.0" onAction="#btnBackOnAction" prefHeight="53.0" prefWidth="69.0" text=".">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-back-arrow-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtId" layoutX="31.0" layoutY="95.0" prefHeight="31.0" prefWidth="94.0" />
+      <TextField fx:id="txtAddress" layoutX="415.0" layoutY="95.0" prefHeight="31.0" prefWidth="221.0" />
+      <TextField fx:id="txtName" layoutX="148.0" layoutY="95.0" prefHeight="31.0" prefWidth="241.0" />
+      <TextField fx:id="txtSalary" layoutX="664.0" layoutY="95.0" />
+      <Label layoutX="34.0" layoutY="71.0" text="Customer ID" />
+      <Label layoutX="664.0" layoutY="71.0" text="Customer Salary" />
+      <Label layoutX="415.0" layoutY="71.0" text="Customer Address" />
+      <Label layoutX="148.0" layoutY="71.0" text="Customer Name" />
+      <Button fx:id="btnUpdate" layoutX="704.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" text="Update" />
+      <Button fx:id="btnSave" layoutX="786.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" />
+      <Button fx:id="btnReload" layoutX="786.0" layoutY="586.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload" />
+      <TableView fx:id="tblCustomer" layoutX="34.0" layoutY="194.0" prefHeight="381.0" prefWidth="823.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="112.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="243.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="239.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="137.0" text="Salary" />
+            <TableColumn fx:id="colOption" prefWidth="91.0" text="Option" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
